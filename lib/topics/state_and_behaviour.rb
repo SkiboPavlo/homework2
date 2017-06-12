@@ -5,15 +5,18 @@ module StateAndBehaviour
   # base class
   class Car
     attr_accessor :year, :color, :model, :current_speed
+    YEAR = 2016
+    COLOR = 'red'
+    MODEL = 'impreza'
 
     def self.default_car
       new
     end
 
     def initialize(car_attributes)
-      @year = car_attributes.fetch(:year, 2016)
-      @color = car_attributes.fetch(:color, 'red')
-      @model = car_attributes.fetch(:model, 'impreza')
+      @year = car_attributes.fetch(:year, YEAR)
+      @color = car_attributes.fetch(:color, COLOR)
+      @model = car_attributes.fetch(:model, MODEL)
       @current_speed = 0
     end
 
