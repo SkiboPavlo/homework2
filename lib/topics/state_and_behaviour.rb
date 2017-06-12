@@ -11,10 +11,10 @@ module StateAndBehaviour
     end
 
     def initialize(car_attributes)
-      self.year = car_attributes[:year] || 2016
-      self.color = car_attributes[:color] || 'red'
-      self.model = car_attributes[:model] || 'impreza'
-      self.current_speed = 0
+      @year = car_attributes.fetch(:year, 2016)
+      @color = car_attributes.fetch(:color, 'red')
+      @model = car_attributes.fetch(:model, 'impreza')
+      @current_speed = 0
     end
 
     def speed_up(faster)
